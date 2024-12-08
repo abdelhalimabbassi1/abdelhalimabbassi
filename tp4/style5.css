@@ -1,0 +1,30 @@
+body{
+   background-color: teal;
+
+}
+.block1{
+    background-color: green;
+    float: left;
+    height: 200px;
+    width: 300px;
+    margin: 10px;
+    text-align: center
+
+}
+
+.block2{
+    background-color: grey;
+    float: right;
+    height: 200px;
+    width: 300px;
+    margin: 10px;
+
+}
+.block3{
+    background-color: yellow;
+    clear: both;
+    height: 200px;
+    width: 300px;
+    margin: 10px;
+
+}

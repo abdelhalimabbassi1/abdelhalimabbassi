@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facture</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="style.js"></script>
+</head>
+<body>
+    <center>
+        <div class="facture">
+            <h1>Facture</h1>
+            <table id="tableFacture">
+                <tr>
+                    <th>Article</th>
+                    <th>Prix unitaire</th>
+                    <th>Quantité</th>
+                    <th>Résultat</th>
+                </tr>
+                <tr>
+                    <td><input type="text" class="description" placeholder="Nom de l'article" value="Article 1"></td>
+                    <td><input type="number" id="prix1" value="10" step="0.01" min="0"></td>
+                    <td><input type="number" id="quantite1" value="1" min="0"></td>
+                    <td><input type="number" id="resultat1" value="0" readonly></td>
+                </tr>
+                <tr>
+                    <td><input type="text" class="description" placeholder="Nom de l'article" value="Article 2"></td>
+                    <td><input type="number" id="prix2" value="15" step="0.01" min="0"></td>
+                    <td><input type="number" id="quantite2" value="2" min="0"></td>
+                    <td><input type="number" id="resultat2" value="0" readonly></td>
+                </tr>
+                
+                <tr>
+                    <td><input type="text" class="description" placeholder="Nom de l'article" value="Article 3"></td>
+                    <td><input type="number" id="prix3" value="20" step="0.01" min="0"></td>
+                    <td><input type="number" id="quantite3" value="3" min="0"></td>
+                    <td><input type="number" id="resultat3" value="0" readonly></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button class="reset" onclick="reset()">Réinitialiser</button></td>
+                    <td colspan="2"><button class="calculer-ttc-btn" onclick="calcul()">Calculer</button></td>
+                </tr>
+            </table>
+        </div>
+    </center>
+
+    
+</body>
+</html>

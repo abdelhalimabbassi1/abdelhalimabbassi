@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau Dynamique</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body style="background-color: grey;">
+    <header>
+        <h1>Identification</h1>
+    </header>
+    <main>
+        <section>
+            <label for="t1">Nom :</label>
+            <input type="text" id="t1" name="nom" placeholder="Entrez un nom"> <br>
+            <label for="t2">Âge :</label>
+            <input type="number" id="t2" name="age" placeholder="Entrez un âge"> <br>
+            <button onclick="ajouterLigne()">Ajouter une ligne</button>
+        </section>
+        <section>
+            <h2>Tableau dynamique</h2>
+            <table id="myTable" style="background-color: pink; border: 1px solid; width: 50%;">
+                <tr>
+                    <th>Nom</th>
+                    <th>Âge</th>
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>30</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
+
+
+
+
+

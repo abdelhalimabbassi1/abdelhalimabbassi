@@ -1,0 +1,108 @@
+/* Applique un style global au document */
+body {
+    font-family: Arial, sans-serif; /* Définit une police simple et lisible */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les espaces internes par défaut */
+    line-height: 1.6; /* Définit l'espacement vertical entre les lignes */
+    background-color: #f9f9f9; /* Définit une couleur de fond légère */
+    color: #333; /* Définit une couleur de texte sombre pour un bon contraste */
+}
+
+/* === SECTION HEADER === */
+/* Style de l'en-tête principal */
+header {
+    background: #0073e6; /* Couleur de fond bleue */
+    color: #fff; /* Texte en blanc pour un contraste clair */
+    padding: 20px; /* Espacement interne pour aérer le contenu */
+    text-align: center; /* Centrer le texte horizontalement */
+}
+
+/* Style du titre principal dans le header */
+header h1 {
+    margin: 0; /* Supprime les marges externes */
+    font-size: 2.5em; /* Augmente la taille du texte */
+}
+
+/* Style des paragraphes dans le header */
+header p {
+    margin: 10px 0 0; /* Ajoute une marge en haut et supprime celle en bas */
+    font-size: 1.2em; /* Taille du texte légèrement augmentée */
+}
+
+/* === SECTION PRINCIPALE (MAIN) === */
+/* Conteneur principal pour le contenu */
+main {
+    padding: 20px; /* Espacement autour du contenu */
+    max-width: 1200px; /* Limite la largeur maximale pour un affichage propre */
+    margin: auto; /* Centre le contenu horizontalement */
+}
+
+/* Style des titres de second niveau dans main */
+main h2 {
+    color: #0073e6; /* Texte en bleu pour correspondre au thème */
+}
+
+/* Style des div dans main */
+main div {
+    margin-bottom: 20px; /* Ajoute de l'espace entre les div */
+    padding: 15px; /* Espacement interne autour du contenu */
+    background: #fff; /* Fond blanc pour contraster avec l'arrière-plan */
+    border-radius: 8px; /* Coins légèrement arrondis */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ajoute une ombre douce pour donner de la profondeur */
+}
+
+/* === BOUTONS === */
+/* Style général pour les boutons */
+button {
+    background: #0073e6; /* Couleur de fond bleue */
+    color: #fff; /* Texte en blanc */
+    border: none; /* Supprime les bordures */
+    padding: 10px 20px; /* Espacement interne pour un meilleur aspect */
+    font-size: 1em; /* Taille de texte standard */
+    cursor: pointer; /* Change le curseur en pointeur au survol */
+    border-radius: 5px; /* Coins légèrement arrondis */
+    margin: 5px; /* Espacement autour du bouton */
+}
+
+/* Style des boutons au survol */
+button:hover {
+    background: #005bb5; /* Fonce la couleur de fond pour un effet visuel */
+}
+
+/* === SECTIONS DE CODE === */
+/* Style des blocs de code */
+pre {
+    background: #f4f4f4; /* Fond gris clair */
+    padding: 10px; /* Espacement interne pour une meilleure lisibilité */
+    border: 1px solid #ddd; /* Bordure grise subtile */
+    border-radius: 5px; /* Coins légèrement arrondis */
+    overflow-x: auto; /* Ajoute un défilement horizontal si nécessaire */
+}
+
+/* Style des fragments de code */
+code {
+    color: #d63384; /* Texte en rose vif pour distinguer les fragments */
+    font-family: "Courier New", Courier, monospace; /* Utilise une police monospace */
+}
+
+/* === PIED DE PAGE (FOOTER) === */
+/* Style général du footer */
+footer {
+    text-align: center; /* Centre le texte horizontalement */
+    padding: 10px 0; /* Espacement vertical interne */
+    background: #333; /* Fond sombre */
+    color: #fff; /* Texte en blanc */
+    position: relative; /* Position normale, ajustable si besoin */
+    bottom: 0; /* Place le footer en bas si la position est absolue */
+    width: 100%; /* S'étend sur toute la largeur de la page */
+}
+
+/* === CONTENU CACHÉ === */
+/* Style des sections cachées */
+.contenu-cache {
+    display: none; /* Masque le contenu par défaut */
+    margin-top: 10px; /* Ajoute un espacement en haut */
+    padding: 20px; /* Espacement interne pour une présentation propre */
+    background-color: #f1f1f1; /* Fond gris clair */
+    border: 1px solid #ddd; /* Bordure fine grise */
+}

@@ -1,0 +1,538 @@
+<!--Abdelhalim ABBASSI-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Banque d'exercice Java Script</h1>
+        <p>Le JavaScript est un langage qui rend les sites web interactifs et dynamiques, permettant de réagir aux actions des utilisateurs et de créer des applications modernes.</p>
+        <br>
+    </header>
+    <main>
+        <!--Exercice 1-->
+        <div>
+            <h2>Exercice 1: ester Majeur/Mineur</h2>
+            <button onclick="test_age()">Tester Majeur/Mineur</button>
+            <button onclick="afficherContenu(2)">Voir la solution</button>
+            <div class="ex1resultat" id="ex1resultat" style="display: none;">
+                <h3>Démonstration</h3>
+            </div>
+            <div class="ex1code" id="ex1code" style="display: none;">
+                <h3>Voici le code de l'exercice</h3>
+                <pre><code>
+                    function test_age(){
+                        let age = prompt(&quot;quelle est votre age ?&quot;);
+                        if (age&lt;18)
+                        {
+                            document.write(&quot;attention accés refusé, vous étes mineurs&quot;);
+                            document.body.style.background = &quot;red&quot;;
+                        }
+                        else
+                        {
+                            document.write(&quot;ok, vous étes majeurs&quot;);
+                            document.body.style.background = &quot;green&quot;;
+                        }
+                    }
+                        </code></pre>
+            </div>
+        </div>
+
+        <!--Exercice 2-->
+        <div>
+            <h2>Exercice 2: Addition de deux nombres</h2>
+            <button onclick="additionner(1)">Voir l'exercice</button>
+            <h2 id="resultat"></h2>
+            <button onclick="afficherContenu2(2)">Voir la solution</button>
+            <div class="ex2resultat" id="ex2resultat" style="display: none;">
+                <h3>Démonstration</h3>
+            </div>
+            <div class="ex2code" id="ex2code" style="display: none;">
+                <h3>Voici le code de l'exercice</h3>
+                <pre>
+                    <code>
+                        function additionner() {
+                            let num1 = parseFloat(prompt("Entrez le premier nombre :"));
+                            let num2 = parseFloat(prompt("Entrez le deuxième nombre :"));
+                            if (isNaN(num1) || isNaN(num2)) {
+                                document.getElementById("resultat").innerText = "Veuillez entrer des nombres valides.";
+                                return;
+                            }
+                            let somme = num1 + num2;
+                            document.getElementById("resultat").innerText = "Résultat : " + somme;
+                        }
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+        <!--Exercice 3-->
+        <div>
+            <h2>Exercice 3: Calculer la multiplication de deux nombres</h2>
+            <button onclick="multiplier(1)">Voir l'exercice</button>
+            <h2 id="resultat1"></h2>
+            <button onclick="afficherContenu3(2)">Voir la solution</button>
+            <div class="ex3resultat" id="ex3resultat" style="display: none;">
+                <h3>Démonstration</h3>
+            </div>
+            <div class="ex3code" id="ex3code" style="display: none;">
+                <h3>Voici le code de l'exercice</h3>
+                <pre><code>
+                    function multiplier() {
+                        // Demander les deux nombres à l'utilisateur
+                        let num1 = parseFloat(prompt("Entrez le premier nombre :"));
+                        let num2 = parseFloat(prompt("Entrez le deuxième nombre :"));
+            
+                        // Vérifier si les saisies sont valides
+                        if (isNaN(num1) || isNaN(num2)) {
+                            document.getElementById("resultat").innerText = "Veuillez entrer des nombres valides.";
+                            return;
+                        }
+            
+                        // Calculer le produit
+                        let produit = num1 * num2;
+            
+                        // Afficher le résultat
+                        document.getElementById("resultat").innerText = "Résultat : " + produit;
+                    }
+        </code></pre>
+            </div>
+        </div>
+
+        <!--Exercice 4-->
+        <div>
+            <h2>Exercice 4: diviser de deux nombres</h2>
+            <button onclick="diviser(1)">Voir l'exercice</button>
+            <h2 id="resultat2"></h2>
+            <button onclick="afficherContenu4(2)">Voir la solution</button>
+            <div class="ex4resultat" id="ex4resultat" style="display: none;">
+                <h3>Démonstration</h3>
+            </div>
+            <div class="ex4code" id="ex4code" style="display: none;">
+                <h3>Voici le code de l'exercice</h3>
+                <pre>
+                    <code>
+                        function diviser() {
+                            // Demander les deux nombres à l'utilisateur
+                            let num1 = parseFloat(prompt("Entrez le premier nombre (dividende) :"));
+                            let num2 = parseFloat(prompt("Entrez le deuxième nombre (diviseur) :"));
+                
+                            // Vérifier si les saisies sont valides
+                            if (isNaN(num1) || isNaN(num2)) {
+                                document.getElementById("resultat").innerText = "Veuillez entrer des nombres valides.";
+                                return;
+                            }
+                
+                            // Vérifier que le diviseur n'est pas zéro
+                            if (num2 === 0) {
+                                document.getElementById("resultat").innerText = "La division par zéro est impossible.";
+                                return;
+                            }
+                
+                            // Calculer le quotient
+                            let quotient = num1 / num2;
+                
+                            // Afficher le résultat
+                            document.getElementById("resultat").innerText = "Résultat : " + quotient;
+                        }
+                    </code>
+                </pre>
+            </div>
+
+            <!--Exercice 5-->
+        </div>
+        <div>
+            <h2>Exercice 5: afficher un tableau</h2>
+            <button onclick="affichagetab()">Voir l'exercice</button>
+            <button onclick="afficherContenu5(2)">Voir la solution</button>
+            <div class="ex5resultat" id="ex5resultat" style="display: none;">
+                <h3>Démonstration</h3>
+            </div>
+            <div class="ex5code" id="ex5code" style="display: none;">
+                <h3>Voici le code de l'exercice</h3>
+                <pre>
+                    <code>
+                        function affichagetab() {
+                            document.write(&quot;&lt;table border=2px width=30%&gt;&quot;);
+                            for (let i = 0; i &lt;= 5; i++) {
+                                document.write(&quot;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;*&lt;/td&gt;&lt;/tr&gt;&quot;);
+                            }
+                            document.write(&quot;&lt;/table&gt;&quot;);
+                        }
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+        <!--Exercice 6-->
+        <div>
+            <h2>Exercice 6: Verifier pair ou impair</h2>
+            <button onclick="verifierPairImpair()">Voir l'exercice</button>
+            <h2 id="resultat3"></h2>
+            <button onclick="afficherContenu6(2)">Voir la solution</button>
+            <div class="ex6resultat" id="ex6resultat" style="display: none;">
+                <h3>Démonstration</h3>
+            </div>
+            <div class="ex6code" id="ex6code" style="display: none;">
+                <h3>Voici le code de l'exercice</h3>
+                <pre>
+                    <code>
+                        function verifierPairImpair() {
+                            let nombre = parseInt(prompt("Entrez un nombre :"));
+                            if (isNaN(nombre)) {
+                                document.getElementById("resultat").innerText = "Veuillez entrer un nombre valide.";
+                                return;
+                            }
+                
+
+                            if (nombre % 2 === 0) {
+                                document.getElementById("resultat").innerText = "Le nombre " + nombre + " est pair.";
+                            } else {
+                                document.getElementById("resultat").innerText = "Le nombre " + nombre + " est impair.";
+                            }
+                        }
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+        <!--Exercice 7-->
+        <div>
+            <h2>Exercice 7: Trouver le plus grand</h2>
+            <button onclick="trouverMax()">Voir l'exercice</button>
+            <h2 id="resultat4"></h2>
+            <button onclick="afficherContenu7(2)">Voir la solution</button>
+            <div class="ex7resultat" id="ex7resultat" style="display: none;">
+                <h3>Démonstration</h3>
+            </div>
+            <div class="ex7code" id="ex7code" style="display: none;">
+                <h3>Voici le code de l'exercice</h3>
+                <pre>
+                    <code>
+                        function trouverMax() {
+                            // Demander trois nombres à l'utilisateur
+                            let num1 = parseFloat(prompt("Entrez le premier nombre :"));
+                            let num2 = parseFloat(prompt("Entrez le deuxième nombre :"));
+                            let num3 = parseFloat(prompt("Entrez le troisième nombre :"));
+                        
+                            // Vérifier si les saisies sont valides
+                            if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+                                document.getElementById("resultat4").innerText = "Veuillez entrer trois nombres valides.";
+                                return;
+                            }
+                        
+                            // Trouver le plus grand nombre
+                            let max = Math.max(num1, num2, num3);
+                        
+                            // Afficher le résultat
+                            document.getElementById("resultat4").innerText = 
+                                "Le plus grand des nombres est : " + max;
+                        }
+                    </code>
+                </pre>
+            </div>
+        </div>
+        </div>
+
+        <!--Exercice 8-->
+        <div>
+            <h2>Exercice 8: Calculer la Moyenne</h2>
+            <button onclick="calculerMoyenne()">Voir l'exercice</button>
+            <h2 id="resultat5"></h2>
+            <button onclick="afficherContenu8(2)">Voir la solution</button>
+            <div class="ex8resultat" id="ex8resultat" style="display: none;">
+                <h3>Démonstration</h3>
+            </div>
+            <div class="ex8code" id="ex8code" style="display: none;">
+                <h3>Voici le code de l'exercice</h3>
+                <pre>
+                    <code>
+                        function calculerMoyenne() {
+                            let total = 0; // Somme des nombres
+                            let count = 0; // Nombre de nombres saisis
+                            let continuer = true;
+                
+                            while (continuer) {
+                                // Demander un nombre à l'utilisateur
+                                let input = prompt("Entrez un nombre (ou cliquez sur Annuler pour terminer) :");
+                
+                                // Vérifier si l'utilisateur veut arrêter
+                                if (input === null) {
+                                    continuer = false;
+                                } else {
+                                    let nombre = parseFloat(input);
+                
+                                    // Vérifier si l'entrée est un nombre valide
+                                    if (isNaN(nombre)) {
+                                        alert("Veuillez entrer un nombre valide !");
+                                    } else {
+                                        total += nombre;
+                                        count++;
+                                    }
+                                }
+                            }
+                
+                            // Vérifier si au moins un nombre a été saisi
+                            if (count > 0) {
+                                let moyenne = total / count; // Calculer la moyenne
+                                document.getElementById("resultat").innerText = 
+                                    "La moyenne des nombres est : " + moyenne.toFixed(2);
+                            } else {
+                                document.getElementById("resultat").innerText = 
+                                    "Aucun nombre n'a été saisi.";
+                            }
+                        }
+                    </code>
+                </pre>
+            </div>
+        </div>
+        </div>
+
+        <!--Exercice 9-->
+        <div>
+            <h2>Exercice 9: Générer un nombre aléatoire et deviner.</h2>
+            <button onclick="devinerNombre()">Voir l'exercice</button>
+            <button onclick="afficherContenu9(2)">Voir la solution</button>
+            <div class="ex9resultat" id="ex9resultat" style="display: none;">
+                <h3>Démonstration</h3>
+            </div>
+            <div class="ex9code" id="ex9code" style="display: none;">
+                <h3>Voici le code de l'exercice</h3>
+                <pre>
+                    <code>
+                        function devinerNombre() {
+                            const nombreAleatoire = Math.floor(Math.random() * 100) + 1;
+                            let tentative = 0;
+                            let trouve = false;
+                        
+                            alert("Un nombre entre 1 et 100 a été généré. Essayez de le deviner !");
+                        
+                            while (!trouve) {
+                                let saisie = prompt("Entrez votre estimation :");
+                                tentative++;
+                        
+                                if (isNaN(saisie)) {
+                                    alert("Veuillez entrer un nombre valide.");
+                                    continue;
+                                }
+                        
+                                let nombre = parseInt(saisie);
+                        
+                                if (nombre === nombreAleatoire) {
+                                    alert(`🎉 Félicitations ! Vous avez trouvé le nombre ${nombreAleatoire} en ${tentative} tentatives.`);
+                                    trouve = true;
+                                } else if (nombre < nombreAleatoire) {
+                                    alert("C'est plus !");
+                                } else {
+                                    alert("C'est moins !");
+                                }
+                            }
+                        }
+                    </code>
+                </pre>
+            </div>
+        </div>
+        </div>
+
+        <!--Exercice 10-->
+        <div>
+            <h2>Exercice 10: Inverser une chaîne de caractères</h2>
+            <button onclick="inverserChaine()">Voir l'exercice</button>
+            <button onclick="afficherContenu10(2)">Voir la solution</button>
+            <div class="ex10resultat" id="ex10resultat" style="display: none;">
+                <h3>Démonstration</h3>
+            </div>
+            <div class="ex10code" id="ex10code" style="display: none;">
+                <h3>Voici le code de l'exercice</h3>
+                <pre>
+                    <code>
+                        function inverserChaine() {
+                            let chaine = prompt("Entrez une chaîne de caractères :");
+                            let chaineInversee = chaine.split("").reverse().join("");
+                            alert(`La chaîne inversée est : ${chaineInversee}`);
+                        }
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+        <!--Exercice 11-->
+        <div>
+        <h2>Exercice 11: Trouver le plus petit nombre parmi trois</h2>
+            <button onclick="trouverMin()">Voir l'exercice</button>
+            <button onclick="afficherContenu11(2)">Voir la solution</button>
+            <div class="ex11resultat" id="ex11resultat" style="display: none;">
+                <h3>Démonstration</h3>
+            </div>
+            <div class="ex11code" id="ex11code" style="display: none;">
+                <h3>Voici le code de l'exercice</h3>
+                <pre>
+                    <code>
+                        function trouverMin() {
+                            let num1 = parseFloat(prompt("Entrez le premier nombre :"));
+                            let num2 = parseFloat(prompt("Entrez le deuxième nombre :"));
+                            let num3 = parseFloat(prompt("Entrez le troisième nombre :"));
+                        
+                            let min = Math.min(num1, num2, num3);
+                            alert(`Le plus petit nombre est : ${min}`);
+                        }
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+        <!--Exercice 12-->
+        <div>
+        <h2>Exercice 12: Trouver Max, Somme et Moyenne</h2>
+            <button onclick="analyserNombres()">Voir l'exercice</button>
+            <button onclick="afficherContenu12(2)">Voir la solution</button>
+            <div class="ex12resultat" id="ex12resultat" style="display: none;">
+                <h3>Démonstration</h3>
+            </div>
+            <div class="ex12code" id="ex12code" style="display: none;">
+                <h3>Voici le code de l'exercice</h3>
+                <pre>
+                    <code>
+                        function analyserNombres() {
+                            // Demande les trois nombres
+                            const num1 = parseFloat(prompt("✨ Entrez le premier nombre :"));
+                            const num2 = parseFloat(prompt("✨ Entrez le deuxième nombre :"));
+                            const num3 = parseFloat(prompt("✨ Entrez le troisième nombre :"));
+                        
+                            // Vérifier si les entrées sont valides
+                            if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+                                alert("❌ Erreur : veuillez entrer uniquement des nombres valides. 🚫");
+                                return; // Arrêter la fonction en cas d'erreur
+                            }
+                        
+                            // Calculer le maximum, la somme et la moyenne
+                            const max = Math.max(num1, num2, num3);
+                            const sum = num1 + num2 + num3;
+                            const average = sum / 3;
+                        
+                            // Afficher les résultats dans une alerte
+                            alert(
+                                `🎉 Résultats :
+                                - 🌟 Le plus grand nombre est : ${max}
+                                - ➕ La somme des nombres est : ${sum}
+                                - 📊 La moyenne est : ${average.toFixed(2)}`
+                            );
+                        }
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+            <!--Exercice 13-->
+        <div>
+        <h2>Exercice 13: Autre Idée : Générer un Nombre Aléatoire</h2>
+            <button onclick="nombreAleatoire()">Voir l'exercice</button>
+            <button onclick="afficherContenu13(2)">Voir la solution</button>
+            <div class="ex13resultat" id="ex13resultat" style="display: none;">
+                <h3>Démonstration</h3>
+            </div>
+            <div class="ex13code" id="ex13code" style="display: none;">
+                <h3>Voici le code de l'exercice</h3>
+                <pre>
+                    <code>
+                        function nombreAleatoire() {
+                            // Demande les limites
+                            const min = parseInt(prompt("🔢 Entrez la valeur minimale :"));
+                            const max = parseInt(prompt("🔢 Entrez la valeur maximale :"));
+                        
+                            // Vérifier les entrées
+                            if (isNaN(min) || isNaN(max) || min >= max) {
+                                alert("❌ Erreur : veuillez entrer deux nombres valides avec min < max.");
+                                return;
+                            }
+                        
+                            // Générer un nombre aléatoire entre min et max
+                            const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+                        
+                            // Afficher le résultat
+                            alert(`🎲 Nombre aléatoire généré entre ${min} et ${max} : ${randomNumber}`);
+                        }
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+        <!--Exercice 14-->
+        <div>
+        <h2>Exercice 14: Calcul du Carré et du Cube</h2>
+            <button onclick="calculCarreCube()">Voir l'exercice</button>
+            <button onclick="afficherContenu14(2)">Voir la solution</button>
+            <div class="ex14resultat" id="ex14resultat" style="display: none;">
+                <h3>Démonstration</h3>
+            </div>
+            <div class="ex14code" id="ex14code" style="display: none;">
+                <h3>Voici le code de l'exercice</h3>
+                <pre>
+                    <code>
+                        function calculCarreCube() {
+                            const num = parseFloat(prompt("💡 Entrez un nombre :"));
+                        
+                            if (isNaN(num)) {
+                                alert("❌ Oups ! Ce n'est pas un nombre valide. 🚫");
+                                return;
+                            }
+                        
+                            const square = num ** 2; // Calcul du carré
+                            const cube = num ** 3;   // Calcul du cube
+                        
+                            alert(`📐 Résultats :
+                            - Carré de ${num} : ${square}
+                            - Cube de ${num} : ${cube}`);
+                        }
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+        <!--Exercice 15-->
+        <div>
+        <h2>Exercice 15: Affiche un Nombre de Points</h2>
+            <button onclick="afficherPoints()">Voir l'exercice</button>
+            <button onclick="afficherContenu15(2)">Voir la solution</button>
+            <div class="ex15resultat" id="ex15resultat" style="display: none;">
+                <h3>Démonstration</h3>
+            </div>
+            <div class="ex15code" id="ex15code" style="display: none;">
+                <h3>Voici le code de l'exercice</h3>
+                <pre>
+                    <code>
+                        function afficherPoints() {
+                            // Demander combien de points afficher
+                            const nombre = parseInt(prompt("🔢 Combien de points voulez-vous afficher ?"));
+                        
+                            // Vérifier si l'entrée est valide
+                            if (isNaN(nombre) || nombre <= 0) {
+                                alert("❌ Veuillez entrer un nombre valide supérieur à 0.");
+                                return;
+                            }
+                        
+                            // Générer les points
+                            let resultat = "";
+                            for (let i = 0; i < nombre; i++) {
+                                resultat += "• "; // Point stylisé (ou remplace par ⭐ pour des étoiles)
+                            }
+                        
+                            // Afficher le résultat
+                            alert(`Voici vos ${nombre} points :\n\n${resultat}`);
+                        }
+                    </code>
+                </pre>
+            </div>
+        </div>
+        
+    </main>
+    <footer>
+        <p>&copy; 2024 Abdelhalim Abbassi. Tous droits réservés. </p>
+    </footer>
+</body>
+</html>
